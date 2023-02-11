@@ -1,0 +1,36 @@
+<div *ngIf="isShow" class="showItem">
+  <div class="w-50 position-relative">
+    <i (click)="isShow = false" class="fa-solid fa-circle-xmark fa-2x"></i>
+    <img class="w-100 rounded-2" [src]="imgSrc" alt="Circus">
+  </div>
+</div>
+<section class="pt-5 min-vh-100 text-center">
+  <div class="container pt-5">
+    <h2 class="fw-bolder">PORTFOLIO</h2>
+    <div class="hr-line my-3 mx-auto position-relative">
+      <div class="star px-3 position-absolute top-50 start-50">
+        <i class="fa-solid fa-star fa-2x"></i>
+      </div>
+    </div>
+    <div class="row py-5 g-4">
+      <div class="item col-lg-4 col-md-6">
+        <img (click)="changeSrc($event)" class="w-100 rounded-2" src="assets\IMGS\cabin.png" alt="Cabin">
+      </div>
+      <div class="item col-lg-4 col-md-6">
+        <img (click)="changeSrc($event)" class="w-100 rounded-2" src="assets\IMGS\cake.png" alt="Cake">
+      </div>
+      <div class="item col-lg-4 col-md-6">
+        <img (click)="changeSrc($event)" class="w-100 rounded-2" src="assets\IMGS\circus.png" alt="Circus">
+      </div>
+      <div class="item col-lg-4 col-md-6">
+        <img (click)="changeSrc($event)" class="w-100 rounded-2" src="assets\IMGS\game.png" alt="Game">
+      </div>
+      <div class="item col-lg-4 col-md-6">
+        <img (click)="changeSrc($event)" class="w-100 rounded-2" src="assets\IMGS\safe.png" alt="Safe">
+      </div>
+      <div class="item col-lg-4 col-md-6">
+        <img (click)="changeSrc($event)" class="w-100 rounded-2" src="assets\IMGS\submarine.png" alt="Submarine">
+      </div>
+    </div>
+  </div>
+</section>

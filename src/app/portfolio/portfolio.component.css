@@ -1,0 +1,27 @@
+h2,.star {
+  color: var(--main-color);
+  background-color: var(--text-color);
+}
+.hr-line {
+  background-color: var(--main-color);
+}
+.item,
+.fa-circle-xmark {
+  cursor: pointer;
+}
+.showItem {
+  background-color: rgba(0,0,0,.7);
+  position: fixed;
+  z-index: 10000;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.fa-circle-xmark {
+  color: red;
+  position: absolute;
+  z-index: 10000;
+  right: 5px;
+  top: 5px;
+}

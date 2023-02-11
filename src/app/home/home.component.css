@@ -1,0 +1,25 @@
+header {
+  background-color: var(--bg-home);
+  height: calc(100vh - 56px);
+}
+.star {
+  background-color: var(--bg-home);
+}
+@media screen and (min-width:992px) {
+  p {
+    font-size: 24px;
+  }
+}
+@media screen and (min-width:270px) and (max-width:991px) {
+  p {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width:270px) {
+  header {
+    height: calc(100vh - 80px);
+  }
+  p {
+    font-size: 16px;
+  }
+}

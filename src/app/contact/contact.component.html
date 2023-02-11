@@ -1,0 +1,78 @@
+<section class="pt-5 min-vh-100 text-center d-flex justify-content-center align-items-center">
+  <div class="container pt-5">
+    <h2 class="fw-bolder">CONTACT ME</h2>
+    <div class="hr-line my-3 mx-auto position-relative">
+      <div class="star px-3 position-absolute top-50 start-50">
+        <i class="fa-solid fa-star fa-2x"></i>
+      </div>
+    </div>
+    <form class="text-start py-5 w-75 mx-auto" [formGroup]="sendForm" (ngSubmit)="formData(sendForm)">
+      <div class="border-bottom mb-2">
+        <input formControlName="name" type="text" class="form-control" placeholder="Name">
+        <div *ngIf="sendForm.get('name')?.errors && sendForm.get('name')?.touched">
+          <p *ngIf="sendForm.get('name')?.getError('required')" class="text-danger">* Name is required</p>
+          <p *ngIf="sendForm.get('name')?.getError('pattern')" class="text-danger">* Name is must start with uppercase</p>
+          <p *ngIf="sendForm.get('name')?.getError('minlength')" class="text-danger">* Name is minlength is 3</p>
+          <p *ngIf="sendForm.get('name')?.getError('maxlength')" class="text-danger">* Name is maxlength is 10</p>
+        </div>
+      </div>
+      <div class="border-bottom mb-2">
+        <input formControlName="email" type="email" class="form-control" placeholder="Email Address">
+        <div *ngIf="sendForm.get('email')?.errors && sendForm.get('email')?.touched">
+          <p *ngIf="sendForm.get('email')?.getError('required')" class="text-danger">* Email is required</p>
+          <p *ngIf="sendForm.get('email')?.getError('email')" class="text-danger">* Email is incorrect</p>
+        </div>
+      </div>
+      <div class="border-bottom mb-2">
+        <input formControlName="phone" type="text" class="form-control" placeholder="Phone Number">
+        <div *ngIf="sendForm.get('phone')?.errors && sendForm.get('phone')?.touched">
+          <p *ngIf="sendForm.get('phone')?.getError('required')" class="text-danger">* Phone number is required</p>
+          <p *ngIf="sendForm.get('phone')?.getError('pattern')" class="text-danger">* Phone number is incorrect</p>
+        </div>
+      </div>
+      <div class="border-bottom mb-2">
+        <textarea formControlName="message" class="form-control" placeholder="Message" rows="3"></textarea>
+        <div *ngIf="sendForm.get('message')?.errors && sendForm.get('message')?.touched">
+          <p *ngIf="sendForm.get('message')?.getError('required')" class="text-danger">* Message is required</p>
+          <p *ngIf="sendForm.get('message')?.getError('minlength')" class="text-danger">* Message is minlength is 10</p>
+          <p *ngIf="sendForm.get('message')?.getError('maxlength')" class="text-danger">* Message is maxlength is 100</p>
+        </div>
+      </div>
+      <button [disabled]="sendForm.invalid" class="btn btn-info text-white" type="submit">
+        <span *ngIf="!isLoading">Send</span>
+        <i *ngIf="isLoading" class="fa-solid fa-spinner fa-spin"></i>
+      </button>
+    </form>
+  </div>
+</section>
+<section class="py-5 text-center">
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-lg-4">
+        <h3>LOCATION</h3>
+        <p>2215 John Daniel Drive<br/>Clark, MO 65243</p>
+      </div>
+      <div class="col-lg-4">
+        <h3>AROUND THE WEB</h3>
+        <div class="icons flex-wrap d-flex justify-content-center align-items-center">
+          <div>
+            <i class="fa-brands fa-facebook-f"></i>
+          </div>
+          <div>
+            <i class="fa-brands fa-twitter"></i>
+          </div>
+          <div>
+            <i class="fa-brands fa-linkedin-in"></i>
+          </div>
+          <div>
+            <i class="fa-brands fa-dribbble"></i>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <h3>ABOUT FREELANCER</h3>
+        <p>Freelance is a free to use, MIT licensed Bootstrap theme created by Route</p>
+      </div>
+    </div>
+  </div>
+</section>

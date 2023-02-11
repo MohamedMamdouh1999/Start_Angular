@@ -1,0 +1,11 @@
+section {
+  background-color: var(--bg-home);
+}
+.star {
+  background-color: var(--bg-home);
+}
+@media screen and (min-width:360px) {
+  section {
+    height: calc(100vh - 56px);
+  }
+}
